@@ -60,3 +60,6 @@ Replace `/path/to/python310` and `/path/to/python312` with your specific Python 
 - Set the environment using `Set-PythonEnvironment p0` for Python 310 or `Set-PythonEnvironment p2` for Python 312.
 - Run Python scripts with `python script_name.py`.
 - Manage Python packages with `pip install package_name`.
+
+![image](https://github.com/miguelgargallo/pythonmanager/assets/5947268/df70f2ed-bcee-4661-9ba3-87f951fff391)
+
