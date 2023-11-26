@@ -8,12 +8,12 @@ This repository outlines scripts and configurations for managing multiple Python
 
 To set up the aliases in Bash for environment switching, add these lines to your `.bashrc` or `.bash_profile`:
 
-+++
+```bash
 alias p0='/path/to/python310/python -m pip'
 alias p2='/path/to/python312/python -m pip'
 alias p0i='/path/to/python310/python -m pip install'
 alias p2i='/path/to/python312/python -m pip install'
-+++
+```
 
 Replace `/path/to/python310` and `/path/to/python312` with the actual paths to your Python installations.
 
@@ -21,7 +21,7 @@ Replace `/path/to/python310` and `/path/to/python312` with the actual paths to y
 
 For PowerShell users, add this function to your PowerShell profile script:
 
-+++
+```
 function Set-Pip {
     param (
         [string]$version
@@ -38,7 +38,7 @@ function Set-Pip {
 function pip {
     & $Global:PIP_COMMAND $args
 }
-+++
+```
 
 Again, replace `/path/to/python310` and `/path/to/python312` with your specific Python paths.
 
