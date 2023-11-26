@@ -21,20 +21,26 @@ Replace `/path/to/python310` and `/path/to/python312` with the actual paths to y
 
 ### PowerShell Configuration
 
-For PowerShell users, add this function to your PowerShell profile script:
+For PowerShell users, include this function in your PowerShell profile script (typically located at `$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`):
 
 ```powershell
-function Set-Pip {
+function Set-PythonEnvironment {
     param (
         [string]$version
     )
     if ($version -eq "p0") {
-        $Global:PIP_COMMAND = "/path/to/python310/python -m pip"
+        $Global:PYTHON_COMMAND = "/path/to/python310/python"
     } elseif ($version -eq "p2") {
-        $Global:PIP_COMMAND = "/path/to/python312/python -m pip"
+        $Global:PYTHON_COMMAND = "/path/to/python312/python"
     } else {
         Write-Host "Version not recognized."
     }
+
+    $Global:PIP_COMMAND = "$Global:PYTHON_COMMAND -m pip"
+}
+
+function python {
+    & $Global:PYTHON_COMMAND $args
 }
 
 function pip {
@@ -42,7 +48,7 @@ function pip {
 }
 ```
 
-Again, replace `/path/to/python310` and `/path/to/python312` with your specific Python paths.
+Replace `/path/to/python310` and `/path/to/python312` with your specific Python paths.
 
 ## Usage
 
@@ -51,5 +57,6 @@ Again, replace `/path/to/python310` and `/path/to/python312` with your specific 
 - Directly install packages using `p0i package_name` for Python 310 and `p2i package_name` for Python 312.
 
 ### In PowerShell
-- Set the environment with `Set-Pip p0` for Python 310 or `Set-Pip p2` for Python 312.
-- Then use `pip install package_name` for package installations.
+- Set the environment using `Set-PythonEnvironment p0` for Python 310 or `Set-PythonEnvironment p2` for Python 312.
+- Run Python scripts with `python script_name.py`.
+- Manage Python packages with `pip install package_name`.
