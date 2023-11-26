@@ -21,7 +21,7 @@ Replace `/path/to/python310` and `/path/to/python312` with the actual paths to y
 
 For PowerShell users, add this function to your PowerShell profile script:
 
-```ps1
+```powershell
 function Set-Pip {
     param (
         [string]$version
