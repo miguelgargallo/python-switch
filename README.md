@@ -1,4 +1,4 @@
-# Python Environment Management
+# Python Version Management
 
 This repository outlines scripts and configurations for managing multiple Python environments. It facilitates easy switching between two Python versions, referred to as `p0` and `p2`.
 
