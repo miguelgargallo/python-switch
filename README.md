@@ -9,8 +9,10 @@ This repository outlines scripts and configurations for managing multiple Python
 To set up the aliases in Bash for environment switching, add these lines to your `.bashrc` or `.bash_profile`:
 
 ```bash
-alias p0='/path/to/python310/python -m pip'
-alias p2='/path/to/python312/python -m pip'
+alias p0='/path/to/python310/python'
+alias p2='/path/to/python312/python'
+alias p0m='/path/to/python310/python -m pip'
+alias p2m='/path/to/python312/python -m pip'
 alias p0i='/path/to/python310/python -m pip install'
 alias p2i='/path/to/python312/python -m pip install'
 ```
